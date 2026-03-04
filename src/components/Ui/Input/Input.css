@@ -1,0 +1,15 @@
+.input-div{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+} 
+.input-div input{
+    width: 20px;
+    height: 20px; 
+    border: 1px solid #E0E0E0;
+}
+.input-div p{
+    font-size: 14px;
+    line-height: 22px;
+    color: #383838;
+}
