@@ -16,3 +16,13 @@
     padding: 12px;
     resize: none;
 }
+
+@media (max-width: 575px) {
+    .textarea-com{
+        width: 100%;
+        height: 190px;
+    }
+    .middle-icon{
+        transform: rotate(90deg);
+    }
+}

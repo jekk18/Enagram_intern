@@ -1,5 +1,5 @@
 .custom-select {
-  width: 155x;
+  width: 155px;
   position: relative; 
 }
 
@@ -47,4 +47,20 @@
 } 
 .arrow.rotate {
   transform: rotate(180deg);
+}
+
+
+@media (max-width: 575px) {
+  .custom-select {
+    width: 100%; 
+  }
+  .select-header{
+    width: 100%;
+  }
+  .select-options{
+    width: 100%;
+  }
+  .middle-icon{
+      transform: rotate(90deg);
+  }
 }

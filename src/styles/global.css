@@ -9,10 +9,14 @@ body{
     width: 100%;
     padding: 24px;
 }
+.burger-menu{
+    display: none;
+}
 .content{
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 .main-content{
     width: calc(100% - 225px);
@@ -234,6 +238,7 @@ body{
     display: flex;
     align-items: center; 
     gap: 24px;
+    flex-wrap: wrap;
 }  
 .middle-content{
     display: flex;

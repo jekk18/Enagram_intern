@@ -7,18 +7,22 @@ import LeftArrows from '../Icons/LeftArrows'
 import Mic from '../Icons/Mic' 
 import Text from '../Icons/Text' 
 import Pdf from '../Icons/Pdf' 
+import Burger from '../Icons/Burger'  
+import CloseIcon from '../Icons/CloseIcon'  
 import logo from '../../assets/img/logo.png'
 
 const Header = ({activeSide, setActiveSide}) => { 
+  const [activeBurger, setActiveBurger] = useState(false);
 
   return (
-    <header className={`header ${activeSide ? 'header-sm' : '' }`}>
+    <header className={`header ${activeSide ? 'header-sm' : '' } ${activeBurger ? 'active-burger' : ''}`}>
       <div className="side-bar-arrow">
         <div className="side-b-a" onClick={()=> {setActiveSide(!activeSide)}}>
           <LeftArrows />
         </div>
       </div>
-      <div className='logo'> 
+     <div className="logo-menu">
+        <div className='logo'> 
         {
           activeSide ? 
           (
@@ -27,8 +31,26 @@ const Header = ({activeSide, setActiveSide}) => {
           ) : (
             <Link to={'/'}><img src={logo} alt="logo" /> </Link>
           )
-        } 
-      </div>
+        }  
+        </div>
+         {/* burger menu */}
+          <div className='burger-menu'>
+            {
+              activeBurger ? (
+                <div className="closeBurgerIcon" onClick={() => {setActiveBurger(false)}}>
+                  <CloseIcon />
+                </div>
+              )
+              :
+              (
+                <div className="burgerIcon" onClick={() => {setActiveBurger(true)}}>
+                  <Burger />
+                </div>
+              )
+            } 
+          </div>
+      {/* burger menu */}
+     </div>
       <nav className='nav'>
         <ul>
           <li className='nav-item'>
@@ -101,7 +123,7 @@ const Header = ({activeSide, setActiveSide}) => {
             </NavLink>
           </li>
         </ul> 
-      </nav>
+      </nav> 
       <div className="user">    
         <div className='user-info'>
           <div className="us-img">
